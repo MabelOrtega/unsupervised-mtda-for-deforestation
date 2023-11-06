@@ -1,0 +1,58 @@
+#INITIAL SETTINGS
+data_directory: 'F:/Doctorado/DomainAdaptation/Data/'
+sensor_type: 'Sentinel2A'
+folder_exp: 'temp_db_vae'
+#folder_exp: 'exp_da_skip'
+#folder_exp: 'patch_dis_4x4'
+save_prob_test: False
+return_layers_cl: False
+num_exp: 27
+times: 5
+type_norm: 3
+t0: '2020'
+t1: '2021'
+sr_1: 'MT_1C'
+tr_1: 'MA_1C'
+tr_2: 'MT_1C'
+tr_3: 'PA_1C'
+ts: 'MA'
+name_img: 'PA_1C'
+channels: 20
+num_classes: 3
+num_domains: 2
+patch_dis: True
+patch_size_dis: 4
+#name_img: 'MT_1C'
+#name_img: 'MA_1C'
+#name_img: 'RO_1C'
+tiles_tr_pa: [1,3,5,8,11,13,14,20] 
+tiles_val_pa: [6,16]
+#tiles_tr_mg: [1,2,4,9,11,16,17,19] 
+#tiles_val_mg: [8,14]
+tiles_tr_mt: [1,4,6,9,11,15,16,18] 
+tiles_val_mt: [7,14]
+tiles_tr_ma: [1,4,7,10,12,13,15,19] 
+tiles_val_ma: [8,14]
+tiles_tr_ro: [1,5,8,11,12,15,18,20] 
+tiles_val_ro: [9,17]
+patch_size: 128
+stride: 4
+def_percent: 2
+
+lambda_r_: 0.5
+lambda_ds_: 1.0
+lambda_de_: 0.0
+lambda_c_: 0.5
+
+num_s: 1
+num_t: 1
+
+
+# TRAINING PARAMETERS
+batch_size: 16
+#channels RGB 12
+lr: 0.0002
+beta_1: 0.5
+
+model_directory: "./Model"
+model_name: KNN_classifier.pkl
